@@ -115,9 +115,12 @@ USE_L10N = True
 USE_TZ = True
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+BASE = BASE.replace(' ', '')[:-20]
+BASE = os.path.join(BASE,'classifier')
 MEDIA_BASE = os.path.join(BASE, "media")
 
 MEDIA_ROOT = MEDIA_BASE
+#MEDIA_ROOT = BASE
 MEDIA_URL = 'media/'
 
 # Static files (CSS, JavaScript, Images)
